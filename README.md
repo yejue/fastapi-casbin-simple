@@ -4,7 +4,7 @@
 
 ## 功能特性
 
-- 超级用户管理（登录、创建菜单、创建用户）
+- 超级用户管理（创建菜单、创建用户）
 - 用户认证（登录、获取当前用户信息）
 - 工作区管理（创建工作区、获取工作区列表、获取工作区详情）
 - 集合管理（创建集合、获取集合列表、获取集合详情）
@@ -43,7 +43,6 @@ python main.py
 系统启动时会自动创建以下账户，密码与用户名相同：
 
 - 超级用户：admin（密码：admin）
-- 普通用户：user1、user2、user3（密码同用户名）
 
 ## 数据模型设计
 
@@ -153,7 +152,6 @@ user_menus = await get_user_menus(user_id=user.id, workspace_id=workspace.id)
 ## API 接口列表
 
 ### 超级用户相关接口
-- POST /api/auth/admin/login - 超级用户登录
 - POST /api/admin/menus - 创建菜单
 - POST /api/admin/users - 创建用户
 
